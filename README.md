@@ -1,4 +1,7 @@
 # Verilog-Projects
+
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/nextseto/Verilog-Projects/master/LICENSE)
+
 This is a Verilog repository that contains source code for past labs and projects.
 
 ## To Run & Test
@@ -32,3 +35,7 @@ This is a Verilog repository that contains source code for past labs and project
 ## Fall 2016
 
 Coming Soon...
+
+## License
+
+All **Verilog-Projects** are released under the MIT license. See LICENSE for details.
