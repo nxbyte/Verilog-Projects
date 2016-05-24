@@ -5,9 +5,11 @@
 This is a Verilog repository that contains source code for past labs and projects.
 
 ## To Run & Test
-##### 1. Xilinx ISE
+##### Option 1. Xilinx ISE
 
-##### 2. [EDA Playground](http://www.edaplayground.com/home)
+- Run the ISE Suite with a module file and test bench file
+
+##### Option 2. [EDA Playground](http://www.edaplayground.com/home)
 - Login through Google or Facebook to save and run modules and test benches
 - Testbench + Design: SystemVerilog/Verilog
 - Tools & Simulators: Icarus Verilog 0.9.7
