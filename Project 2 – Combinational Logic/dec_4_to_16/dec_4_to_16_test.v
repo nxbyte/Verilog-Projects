@@ -23,17 +23,17 @@ module dec_4_to_16_test;
 	// Instantiate the Unit Under Test (UUT)
 	dec_4_to_16 uut 
 	(
-		.ADDR(ADDR), 
-		.DEC(DEC)
+        .ADDR(ADDR),
+        .DEC(DEC)
 	);
 
 	initial begin
-	
-		// Initialize Inputs
-		ADDR = 0;
-		
-		// Initialize counter variable
-		count = 0;
+
+        // Initialize Inputs
+        ADDR = 0;
+
+        // Initialize counter variable
+        count = 0;
 
 		// Loops over the possible combinations for ADDR
       for (count = 1; count <= 16; count = count + 1) begin

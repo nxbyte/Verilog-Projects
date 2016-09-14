@@ -12,8 +12,8 @@
 	// Input & Output components to use in the half-adder
 	module half_adder
 	(
-    	input iA, input iB,
-    	output oSUM, output oCARRY
+        input iA, input iB,
+        output oSUM, output oCARRY
     );
 	
 	// This uses an exclusive OR gate to find the SUM of two inputs

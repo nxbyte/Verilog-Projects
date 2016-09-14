@@ -2,7 +2,7 @@
 
 ## Objective
 
-The purpose of this design assignment was to create modules of combinational logic in the Verilog Hardware Description Language (HDL) format. While completing this task, students continued immersing themselves in the Xilinx platform and the Verilog HDL. Through this assignment the team: prepared truth tables, wrote Verilog code per module, and made test fixtures to test each module. The assignment tasked the group to create: a full adder, a 4-bit adder, a three bit comparator, a 4-16 decoder, a priority encoder, and a 4-1 multiplexer. 
+The purpose of this design assignment was to create different types of modules with the use of combinational logic in Verilog. While completing this task, the group continued exploring in the Xilinx platform and Verilog. Through this assignment the team: prepared truth tables, wrote Verilog code per module, and made test fixtures to test each module. This assignment tasked the group to create: a full adder, a 4-bit adder, a 3-bit comparator, a 4-16 decoder, a priority encoder, and a 4-1 multiplexer. 
 
 ## Source Directories
 
