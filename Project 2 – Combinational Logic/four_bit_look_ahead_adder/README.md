@@ -2,7 +2,7 @@
 
 ## Objective
 
-This 4-bit look ahead adder is an improved implementation of a 4-bit ripple adder by eliminating the propagation delay found in the ripple 4-bit adder. For each output, this implementation computes each previous carry simultaneously instead of waiting for the previous adder block to yield a carry. In this adder, the first carry bit is set to zero and simplified the logic because there was no initial carry bit as the input. While this implementation uses more gates and more complex logic to accomplish the same task as the ripple adder, this implementation would add two 4-bit numbers faster than the ripple version.
+This 4-bit look ahead adder is an improved implementation of a 4-bit ripple adder by eliminating the propagation delay found in the 4-bit ripple adder. For each output, this implementation computes each previous carry simultaneously instead of waiting for the previous adder module to yield a carry. In this adder, the first carry bit is set to zero and simplifies the logic because there is no initial carry bit as the input. While this implementation uses more gates and more complex logic to accomplish the same task as the ripple adder, this implementation would add two 4-bit numbers much faster than the 4-bit ripple adder.
 
 ## Waveforms
 

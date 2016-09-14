@@ -2,7 +2,7 @@
 
 ## Objective
 
-This 4-1 multiplexer takes an input of four bits and another input of two bits and outputs the selected input. In this module, the two bits are the select bits that would select which one the inputs should be designated as the output. 
+This 4-1 multiplexer takes an input of four bits and another input of 2-bits and outputs the selected input. In this module, the two bits are the select bits that would select which one the inputs should be designated as the output. 
 
 ## Waveforms
 

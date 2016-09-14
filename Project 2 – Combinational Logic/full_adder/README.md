@@ -2,7 +2,7 @@
 
 ## Objective
 
-This full adder takes 3-bits for the input as A, B and Carry In. It outputs 2-bits as Sum and Carry Out. The Sum will be the lowest value output and the Carry Out is the highest value output as well as where other full adders could be joined together.
+This full adder takes 3-bits for the input (A, B and carry in) and outputs a 2-bit Sum and its corresponding Carry Out. The Sum will be the lowest value output and the Carry Out is the highest value output as well as where other full adders could be joined together. 
 
 ## Waveforms
 

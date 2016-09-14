@@ -2,7 +2,8 @@
 
 ## Objective
 
-This 4-bit adder takes advantage of the full adder module by taking four full  adders and linking them together to add 2 four bit inputs. In the 4-bit adder, the first carry bit is set to zero because there was no initial carry bit as the input. 
+This 4-bit adder takes advantage of the full adder module by taking four full adders and linking them together to add 2 four bit inputs. In the 4-bit adder, the first carry bit is set to zero because there is no initial carry bit as an input. 
+
 
 ## Waveforms
 

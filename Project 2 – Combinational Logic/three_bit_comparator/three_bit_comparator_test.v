@@ -35,21 +35,20 @@ module three_bit_comparator_test;
 
   	initial begin
 
-		// Initialize Inputs
-		A = 0;
-		B = 0;
+	// Initialize Inputs
+	A = 0;
+	B = 0;
 
-		// Initialize counter variables
-		count = 0;
+	// Initialize counter variables
+	count = 0;
 	end
 
   //Whenever the value of either A or B changes, iterate the possible combinations 
   always @(A or B)
 	begin
-	
 		// Loops over the possible combinations for A and B
-      for (count = 0; count < 64; count = count + 1) 
-         #1 {A, B} = count; 
+		for (count = 0; count < 64; count = count + 1) 
+			#1 {A, B} = count; 
 			#5 $stop;
       end
 endmodule

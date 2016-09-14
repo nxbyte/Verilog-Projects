@@ -2,11 +2,11 @@
 
 ## Objective
 
-This 4-to-16 decoder takes one four bit input and outputs the sixteen bit representation of the input. This module uses the concept of one-hot decoding where each output would have one output that would correspond to the input. 
+This 4-to-16 decoder takes one 4-bit input and outputs a 16-bit representation of the input. This module uses the concept of one-hot decoding where each output would have one output that would correspond to the input. 
 
-An application for this decoder would be to convert a four bit binary to its hexadecimal representation. 
+An application for this decoder would be to convert a 4-bit binary value to its hexadecimal representation. 
 
-To verify this module, the input’s binary bits were converted into their decimal representation and compared to the output’s decimal representation to see if they matched.
+To verify this module, the binary bits of the input is converted into their decimal representation and compared to the output’s decimal representation to see if they match.
 
 ## Waveforms
 

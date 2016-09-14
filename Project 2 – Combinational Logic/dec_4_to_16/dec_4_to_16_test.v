@@ -23,8 +23,8 @@ module dec_4_to_16_test;
 	// Instantiate the Unit Under Test (UUT)
 	dec_4_to_16 uut 
 	(
-        .ADDR(ADDR),
-        .DEC(DEC)
+		.ADDR(ADDR),
+		.DEC(DEC)
 	);
 
 	initial begin
@@ -39,7 +39,6 @@ module dec_4_to_16_test;
       for (count = 1; count <= 16; count = count + 1) begin
 			#5 ADDR = count;
 		end
-
 	end
 		// The test will run for a total interval of 80ns
       initial #80 $finish;
