@@ -35,20 +35,21 @@ module full_adder_test;
 
 	initial begin
 	
-		// Initialize Inputs
-		A = 0;
-		B = 0;
-		CARRY_IN = 0;
+	// Initialize Inputs
+	A = 0;
+	B = 0;
+	CARRY_IN = 0;
 		
-		// Initialize counter variable
-		count = 0;
+	// Initialize counter variable
+	count = 0;
 		
-		// Loops over the possible combinations for A, B and CARRY_IN
-      for (count = 1; count < 12; count = count + 1) begin
-			#5 {A, B, CARRY_IN} = count;
-      end
+	// Loops over the possible combinations for A, B and CARRY_IN
+	for (count = 1; count < 12; count = count + 1) begin
+		#5 {A, B, CARRY_IN} = count;
+	end
 
 	end
-		// The test will run for a total interval of 40ns
-      initial #40 $finish;
+	
+	// The test will run for a total interval of 40ns
+	initial #40 $finish;
 endmodule

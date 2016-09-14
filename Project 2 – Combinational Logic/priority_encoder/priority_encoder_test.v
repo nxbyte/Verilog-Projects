@@ -11,23 +11,23 @@
 
 module priority_encoder_test;
 
-    // Input
-   reg [3:0] D;
+	// Input
+	reg [3:0] D;
 
-   // Outputs
-   wire [1:0] ENC;
-   wire VLD;
+	// Outputs
+	wire [1:0] ENC;
+	wire VLD;
 
 	// Instantiate a counter variable for the loop
 	integer count;
 
-   // Instantiate the Unit Under Test (UUT)
-   priority_encoder uut 
+	// Instantiate the Unit Under Test (UUT)
+	priority_encoder uut 
 	(
-       .D(D), 
-       .ENC(ENC), 
-       .VLD(VLD)
-   );
+		.D(D), 
+		.ENC(ENC), 
+		.VLD(VLD)
+	);
 
     initial begin
 	 
@@ -37,9 +37,9 @@ module priority_encoder_test;
 	// Initialize counter variable
 	count = 0;
 
-		// Loops over the possible combinations for D
-      for (count = 1; count <= 16; count = count + 1) begin
-			#5 D = count;
+	// Loops over the possible combinations for D
+	for (count = 1; count <= 16; count = count + 1) begin
+		#5 D = count;
 		end
 	end     
  		// The test will run for a total interval of 80ns

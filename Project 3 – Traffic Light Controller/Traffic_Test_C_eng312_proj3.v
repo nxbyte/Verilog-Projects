@@ -32,23 +32,25 @@ module Traffic_Test;
   	wire[1:0] count3;
   
   	// Counter Modules
-    nsCounter clock1(clk, count1); 	 // Count a total of 32 seconds
-    ewCounter clock2(clk, count2); 	 // Counts a total of 16 seconds
-    yellowCounter clock3(clk, count3); // Counts a total of 4 seconds
+  	nsCounter clock1(clk, count1); 	 // Count a total of 32 seconds
+	ewCounter clock2(clk, count2); 	 // Counts a total of 16 seconds
+	yellowCounter clock3(clk, count3); // Counts a total of 4 seconds
   
   	// Main Traffic Module
   	Traffic CORE (count1, count2, count3, NS_VEHICLE_DETECT, EW_VEHICLE_DETECT, NS_RED, NS_YELLOW, NS_GREEN, EW_RED, EW_YELLOW, EW_GREEN);
   	
 	initial begin
-		clk = 0;
-		NS_VEHICLE_DETECT = 0;
-		EW_VEHICLE_DETECT = 1;
-      
-      $display("                         NS | EW ");
-      $display("              (Time) | R Y G R Y G ");
-      $monitor("%d | %h %h %h %h %h %h", $time, NS_RED, NS_YELLOW, NS_GREEN, EW_RED, EW_YELLOW, EW_GREEN);
-      
-    	#1000 $finish;
+	
+	clk = 0;
+	NS_VEHICLE_DETECT = 0;
+	EW_VEHICLE_DETECT = 1;
+	
+	$display("                         NS | EW ");
+	$display("              (Time) | R Y G R Y G ");
+	$monitor("%d | %h %h %h %h %h %h", $time, NS_RED, NS_YELLOW, NS_GREEN, EW_RED, EW_YELLOW, EW_GREEN);
+	
+	#1000 $finish;
+    	
 	end
 
 	always begin
@@ -64,4 +66,5 @@ module Traffic_Test;
 		EW_VEHICLE_DETECT = ~EW_VEHICLE_DETECT;
     end
   end 
+  
 endmodule

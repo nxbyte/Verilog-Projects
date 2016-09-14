@@ -28,8 +28,9 @@ module half_adder_test;
 		.oCARRY(oCARRY)
 	);
 
-// The code below tests the half-adder by manually changing the values of each input register
-initial begin
+
+	// The code below tests the half-adder by manually changing the values of each input register
+	initial begin
 
 	// Set the both input registers as 0 as a default
 	iA = 0;
@@ -48,5 +49,4 @@ initial begin
 		 
 	 // The test should run for a total of 25 nanoseconds
 	initial #25 $finish;
-	
 endmodule

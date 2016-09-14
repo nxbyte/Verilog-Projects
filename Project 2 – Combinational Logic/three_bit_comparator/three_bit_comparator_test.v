@@ -41,6 +41,7 @@ module three_bit_comparator_test;
 
 	// Initialize counter variables
 	count = 0;
+	
 	end
 
   //Whenever the value of either A or B changes, iterate the possible combinations 
