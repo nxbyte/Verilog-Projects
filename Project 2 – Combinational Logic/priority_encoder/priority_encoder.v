@@ -9,7 +9,7 @@
 	Design Description: Verilog Module for Priority Encoder
 */
 
-// Input and Output Components to use in the priority encoder 
+
 module priority_encoder
 (
     input [3:0] D,
@@ -17,10 +17,8 @@ module priority_encoder
     output VLD
 );
   
-assign ENC[0] = (~D[2] & D[1]) | D[3];
-	 
-assign ENC[1] = D[2] | D[3];
-	 
-assign VLD = D[0] | D[1] | D[2] | D[3];
+	assign ENC[0] = (~D[2] & D[1]) | D[3];
+	assign ENC[1] = D[2] | D[3];
+	assign VLD = D[0] | D[1] | D[2] | D[3];
 	 
 endmodule

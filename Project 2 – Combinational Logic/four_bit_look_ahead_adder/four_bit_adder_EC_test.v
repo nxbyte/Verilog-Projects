@@ -31,10 +31,10 @@ module four_bit_adder_EC_test;
 
   	initial begin
 	
-	// Initialize Inputs
-	A = 0;
-	B = 0;
-	count = 0;
+		// Initialize Inputs
+		A = 0;
+		B = 0;
+		count = 0;
 	
 	end
   
@@ -46,4 +46,5 @@ module four_bit_adder_EC_test;
 			#1 {A, B} = count; 
 			#2 $stop;
       end
+      
 endmodule

@@ -41,19 +41,20 @@ module Traffic_Test;
   	
   	initial begin
   	
-	clk = 0;
-	NS_VEHICLE_DETECT = 0;
-	EW_VEHICLE_DETECT = 0;
+		clk = 0;
+		NS_VEHICLE_DETECT = 0;
+		EW_VEHICLE_DETECT = 0;
       
-	$display("  NS | EW ");
-	$display("R Y G R Y G ");
-	$monitor("%h %h %h %h %h %h", NS_RED, NS_YELLOW, NS_GREEN, EW_RED, EW_YELLOW, EW_GREEN);
+		$display("  NS | EW ");
+		$display("R Y G R Y G ");
+		$monitor("%h %h %h %h %h %h", NS_RED, NS_YELLOW, NS_GREEN, EW_RED, EW_YELLOW, EW_GREEN);
       
-	#100000000 $finish;
+		#100000000 $finish;
 	
 	end
 
 	always begin
 		#1 clk = ~clk;
 	end
+	
 endmodule

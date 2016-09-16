@@ -31,17 +31,18 @@ module priority_encoder_test;
 
     initial begin
 	 
-	// Initialize Input
-	D = 0;
+		// Initialize Input
+		D = 0;
 	
-	// Initialize counter variable
-	count = 0;
+		// Initialize counter variable
+		count = 0;
 
-	// Loops over the possible combinations for D
-	for (count = 1; count <= 16; count = count + 1) begin
-		#5 D = count;
+		// Loops over the possible combinations for D
+		for (count = 1; count <= 16; count = count + 1) begin
+			#5 D = count;
 		end
+		
 	end     
- 		// The test will run for a total interval of 80ns
-      initial #80 $finish;
+	
+      initial #80 $finish; // The test will run for a total interval of 80 nanoseconds
 endmodule

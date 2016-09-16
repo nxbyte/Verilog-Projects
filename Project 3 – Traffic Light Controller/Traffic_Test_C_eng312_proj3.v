@@ -41,15 +41,15 @@ module Traffic_Test;
   	
 	initial begin
 	
-	clk = 0;
-	NS_VEHICLE_DETECT = 0;
-	EW_VEHICLE_DETECT = 1;
+		clk = 0;
+		NS_VEHICLE_DETECT = 0;
+		EW_VEHICLE_DETECT = 1;
 	
-	$display("                         NS | EW ");
-	$display("              (Time) | R Y G R Y G ");
-	$monitor("%d | %h %h %h %h %h %h", $time, NS_RED, NS_YELLOW, NS_GREEN, EW_RED, EW_YELLOW, EW_GREEN);
+		$display("                         NS | EW ");
+		$display("              (Time) | R Y G R Y G ");
+		$monitor("%d | %h %h %h %h %h %h", $time, NS_RED, NS_YELLOW, NS_GREEN, EW_RED, EW_YELLOW, EW_GREEN);
 	
-	#1000 $finish;
+		#1000 $finish;
     	
 	end
 
@@ -57,14 +57,14 @@ module Traffic_Test;
     	#1 clk = ~clk;
 	end
 
-  always @ (clk) begin
-    if ($time % 15 == 0) begin
-		NS_VEHICLE_DETECT = ~NS_VEHICLE_DETECT;
-    end
+	always @ (clk) begin
+		if ($time % 15 == 0) begin
+			NS_VEHICLE_DETECT = ~NS_VEHICLE_DETECT;
+    	end
     
-    if ($time % 6 == 0) begin
-		EW_VEHICLE_DETECT = ~EW_VEHICLE_DETECT;
-    end
-  end 
+    	if ($time % 6 == 0) begin
+			EW_VEHICLE_DETECT = ~EW_VEHICLE_DETECT;
+		end
+	end 
   
 endmodule

@@ -34,7 +34,7 @@ initial begin
        EW_GREEN <= 0;
 end
 
-  always @ (nsCounter) begin
+	always @ (nsCounter) begin
   	// Sets the start state at: 010100
     if (nsCounter == 31 & EW_VEHICLE_DETECT & NS_GREEN) begin
        NS_RED <= 0;
@@ -78,9 +78,10 @@ end
        EW_YELLOW <= 0;
        EW_GREEN <= 0;
     end 
-  end
+end
   
 endmodule
+
 
 /* 
 	A Counter for the North-South Traffic Light
@@ -92,28 +93,29 @@ module nsCounter
     output [4:0] count
 );
 
-wire clk;
-reg[4:0] count;
+	wire clk;
+	reg[4:0] count;
 
-initial
-    count = 0;
+	initial
+    	count = 0;
 
-always @( negedge clk )
-    count[0] <= ~count[0];
+		always @( negedge clk )
+    		count[0] <= ~count[0];
 
-always @( negedge count[0] )
-    count[1] <= ~count[1];
+		always @( negedge count[0] )
+    		count[1] <= ~count[1];
 
-always @( negedge count[1] )
-    count[2] <= ~count[2];
+		always @( negedge count[1] )
+    		count[2] <= ~count[2];
 
-always @( negedge count[2] )
-    count[3] <= ~count[3];
+		always @( negedge count[2] )
+    		count[3] <= ~count[3];
 
-always @( negedge count[3] )
-    count[4] <= ~count[4];
+		always @( negedge count[3] )
+    		count[4] <= ~count[4];
 
 endmodule
+
 
 /* 
 	A Counter for the East-West Traffic Light
@@ -125,25 +127,26 @@ module ewCounter
     output [3:0] count
 );
 
-wire clk;
-reg[3:0] count;
+	wire clk;
+	reg[3:0] count;
 
-initial
-    count = 0;
+	initial
+    	count = 0;
 
-always @( negedge clk )
-    count[0] <= ~count[0];
+		always @( negedge clk )
+    		count[0] <= ~count[0];
 
-always @( negedge count[0] )
-    count[1] <= ~count[1];
+		always @( negedge count[0] )
+    		count[1] <= ~count[1];
 
-always @( negedge count[1] )
-    count[2] <= ~count[2];
+		always @( negedge count[1] )
+    		count[2] <= ~count[2];
 
-always @( negedge count[2] )
-    count[3] <= ~count[3];
+		always @( negedge count[2] )
+    		count[3] <= ~count[3];
 
 endmodule
+
 
 /* 
 	A Counter for the common yellow Traffic Light
@@ -155,16 +158,16 @@ module yellowCounter
  	output [1:0] count
 );
 
-wire clk;
-reg[1:0] count;
+	wire clk;
+	reg[1:0] count;
 
-initial
-    count = 0;
+	initial
+    	count = 0;
   
-always @( negedge clk )
-    count[0] <= ~count[0];
+		always @( negedge clk )
+    		count[0] <= ~count[0];
 
-always @( negedge count[0] )
-    count[1] <= ~count[1];
+		always @( negedge count[0] )
+    		count[1] <= ~count[1];
   
 endmodule
