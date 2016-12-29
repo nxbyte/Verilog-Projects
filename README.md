@@ -1,7 +1,5 @@
 # Verilog Projects
 
---
-
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/nextseto/Verilog-Projects/master/LICENSE)
 
 This is a repository that contains the source code for past labs and projects. 
