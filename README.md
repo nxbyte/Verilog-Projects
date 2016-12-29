@@ -1,18 +1,33 @@
 # Verilog Projects
 
+--
+
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/nextseto/Verilog-Projects/master/LICENSE)
 
-This is a Verilog repository that contains source code for past labs and projects.
+This is a repository that contains the source code for past labs and projects. 
 
 ## To Run & Test
+
+There are two ways to run and simulate the projects below. Either use the **Xilinx ISE** or an online tool called **EDA Playground**.
+
 ##### Option 1. Xilinx ISE
 
-- Run the ISE Suite with a module file and test bench file
+- Run the Xilinx ISE Suite with the module and test bench files for each project
 
 ##### Option 2. [EDA Playground](http://www.edaplayground.com/home)
-- Login through Google or Facebook to save and run modules and test benches
+- Login with a Google or Facebook account to save and run modules and test benches
 - Testbench + Design: SystemVerilog/Verilog
 - Tools & Simulators: Icarus Verilog 0.9.7
+
+## Spring 2017
+
+Coming soon...
+
+## Fall 2016
+
+- [64-Bit Adder](/Project 4 - 64-Bit Adder): This project contains three different implementations of a 64-Bit Adder module using: ripple-carry adders, 2-bit look ahead adders, and a behavioral design.
+
+- [ARM LEGv8 Simulator](/Project 5 - ARM LEGv8 Simulator): This project simulates an ARM LEG v8 single cycle CPU and only supports a limited set of ARM LEG v8 instructions. Supported instructions include: **LDUR**, **STUR**, **ADD**, **SUB**, **AND**, **ORR**, **CBZ** and **B**. This project is based on the ARM architecture from the textbook: *Computer Organization and Design: The Hardware/Software Interface ARM Edition by D. Patterson and J. Hennessy, Morgan Kaufmann, 2016* [ISBN: 978-012-8017333](https://www.amazon.com/Computer-Organization-Design-Interface-Architecture/dp/0128017333/ref=sr_1_1?ie=UTF8&qid=1483051663&sr=8-1&keywords=9780128017333)
 
 ## Fall 2015
 
@@ -28,15 +43,11 @@ This is a Verilog repository that contains source code for past labs and project
 
 - [4-16 Decoder](/Project 2 – Combinational Logic/dec_4_to_16): This 4-to-16 decoder takes one 4-bit input and outputs a 16-bit representation of the input. This module uses the concept of one-hot decoding where each output would have one output that would correspond to the input. An application for this decoder would be to convert a 4-bit binary value to its hexadecimal representation. To verify this module, the binary bits of the input is converted into their decimal representation and compared to the output’s decimal representation to see if they match.
 
-- [Priority Encoder](/Project 2 – Combinational Logic/priority_encoder): This priority encoder takes one 4-bit input and outputs the binary representation of the index of the active input bit with the highest priority. Also, the module will indicate if the output generated is valid by toggling the valid bit, VLD. This solves the issue of having two inputs active at the same time by having the input of the highest priority take precedence.
+- [Priority Encoder](/Project 2 – Combinational Logic/priority_encoder): This priority encoder takes one 4-bit input and then outputs the binary representation of the index of the active input bit with the highest priority. Also, the module will indicate if the output generated is valid by toggling the valid bit, VLD. This solves the issue of having two inputs active at the same time by having the input of the highest priority take precedence.
 
-- [4-1 Multiplexer](/Project 2 – Combinational Logic/mux_four_to_one): This 4-1 multiplexer takes an input of four bits and another input of 2-bits and outputs the selected input. In this module, the two bits are the select bits that would select which one the inputs should be designated as the output.
+- [4-1 Multiplexer](/Project 2 – Combinational Logic/mux_four_to_one): This 4-1 multiplexer takes an input of four bits and another input of 2-bits and outputs based on the selected input. In this module, the two bits are the select bits that would select which one the inputs should be designated as the output.
 
 - [Traffic Light Controller](/Project 3 – Traffic Light Controller): The aim of this project is to design a digital controller to control traffic at an intersection of a busy main street (North-South) and an occasionally used side street (East-West).
-
-## Fall 2016
-
-Coming Soon...
 
 ## License
 
