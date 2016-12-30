@@ -25,7 +25,7 @@ Coming soon...
 
 - [64-Bit Adder](/Project 4 - 64-Bit Adder): This project contains three different implementations of a 64-Bit Adder module using: ripple-carry adders, 2-bit look ahead adders, and a behavioral design.
 
-- [ARM LEGv8 Simulator](/Project 5 - ARM LEGv8 Simulator): This project simulates an ARM LEG v8 single cycle CPU and only supports a limited set of ARM LEG v8 instructions. Supported instructions include: **LDUR**, **STUR**, **ADD**, **SUB**, **AND**, **ORR**, **CBZ** and **B**. This project is based on the ARM architecture from the textbook: *Computer Organization and Design: The Hardware/Software Interface ARM Edition by D. Patterson and J. Hennessy, Morgan Kaufmann, 2016* [ISBN: 978-012-8017333](https://www.amazon.com/Computer-Organization-Design-Interface-Architecture/dp/0128017333/ref=sr_1_1?ie=UTF8&qid=1483051663&sr=8-1&keywords=9780128017333)
+- [ARM LEGv8 Simulator](/Project 5 - ARM LEGv8 Simulator): This project simulates an ARM LEG v8 single cycle CPU and only supports a limited set of ARM LEG v8 instructions. Supported instructions include: ``LDUR``, ``STUR``, ``ADD``, ``SUB``, ``ORR``, ``AND``, ``CBZ`` and ``B``. This project is based on the ARM architecture from the textbook: *Computer Organization and Design: The Hardware/Software Interface ARM Edition by D. Patterson and J. Hennessy, Morgan Kaufmann, 2016* [ISBN: 978-012-8017333](https://www.amazon.com/Computer-Organization-Design-Interface-Architecture/dp/0128017333/ref=sr_1_1?ie=UTF8&qid=1483051663&sr=8-1&keywords=9780128017333)
 
 ## Fall 2015
 
@@ -49,4 +49,4 @@ Coming soon...
 
 ## License
 
-All **Verilog-Projects** are released under the MIT license. See LICENSE for details.
+All source code in **Verilog-Projects** is released under the MIT license. See LICENSE for details.

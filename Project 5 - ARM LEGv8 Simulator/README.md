@@ -20,7 +20,7 @@ With the instruction memory, data memory and register memory located outside the
 
 The examples below use the following 'variables' to show off the functionaility for each instruction:
 
-- ``r{#}``: Register # in the CPU (From 0 to 31)
+- ``r#``: Register # in the CPU (From 0 to 31)
 - ``RAM``: Random Access Memory (RAM) or Data Memory
 - ``PC``: Program Counter
 
@@ -100,7 +100,7 @@ Example: ``B #2``
 
 ## Test Program (Instructions)
 
-The test program used to test the CPU runs through thirteen instructions as shown in the table below. 
+The thirteen instructions as shown in the table below is the test program used to test the functionality of the CPU.
 
 | Line # |      ARM Assembly     |                Machine Code             | Hexadecimal|
 |:------:|:----------------------|:---------------------------------------:|:----------:|
@@ -128,15 +128,15 @@ The Data Memory was initialized with values starting from 0-3100 with each conte
 
 ## Waveforms
 
-Simulation results of the contents in the CPU's Registers
+Simulation results of the final content in RAM (Data Memory)
 
 ![Project 5 Waveform for Registers](/Project 5 - ARM LEGv8 Simulator/Simulation Waveforms/project5_test_A.png)
 
-Simulation results of the contents in RAM (Data Memory)
+Simulation results of the final contents in the CPU's Registers
 
 ![Project 5 Waveform for Data Memory](/Project 5 - ARM LEGv8 Simulator/Simulation Waveforms/project5_test_B.png)
 
-[More simulation results. (For each instruction)]()
+[More simulation results. (For each instruction)](/Project 5 - ARM LEGv8 Simulator/Simulation Waveforms/)
 
 ## Source Directories
 
