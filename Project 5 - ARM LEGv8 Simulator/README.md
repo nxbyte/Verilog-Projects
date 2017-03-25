@@ -128,13 +128,13 @@ The Data Memory was initialized with values starting from 0-3100 with each conte
 
 ## Waveforms
 
-Simulation results of the final content in RAM (Data Memory)
+- Simulation results of the final content in RAM (Data Memory)
 
-![Project 5 Waveform for Registers](/Project%205%20-%20ARM%20LEGv8%20Simulator/Simulation Waveforms/project5_test_A.png)
+![Project 5 Waveform for Registers](/Project%205%20-%20ARM%20LEGv8%20Simulator/Simulation%20Waveforms/project5_test_A.png)
 
-Simulation results of the final contents in the CPU's Registers
+- Simulation results of the final contents in the CPU's Registers
 
-![Project 5 Waveform for Data Memory](/Project%205%20-%20ARM%20LEGv8%20Simulator/Simulation Waveforms/project5_test_B.png)
+![Project 5 Waveform for Data Memory](/Project%205%20-%20ARM%20LEGv8%20Simulator/Simulation%20Waveforms/project5_test_B.png)
 
 [More simulation results. (For each instruction)](/Project%205%20-%20ARM%20LEGv8%20Simulator/Simulation%20Waveforms/)
 
