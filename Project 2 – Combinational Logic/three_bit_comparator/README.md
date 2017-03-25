@@ -10,7 +10,7 @@ To verify this module, the binary input bits were converted into their decimal r
 
 Simulation results from the Verilog representation of this Three-Bit Comparator
 
-![Project 2 Waveform for Three-Bit Comparator](/Project 2 – Combinational Logic/three_bit_comparator/Simulation Waveforms/project2_comparator.png)
+![Project%202%20Waveform%20for%20Three-Bit%20Comparator](/Project%202%20–%20Combinational%20Logic/three_bit_comparator/Simulation%20Waveforms/project2_comparator.png)
 
 ## Source Files
 

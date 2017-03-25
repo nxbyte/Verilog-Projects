@@ -8,7 +8,7 @@ The main goal of this lab was to: create a verilog module, create a test fixture
 
 Simulation results from the Verilog representation of this Half-Adder:
 
-![Project 1 Waveform](/Project 1 – Introduction to Xilinx/Simulation Waveforms/project1_halfAdder.png)
+![Project 1 Waveform](/Project%201%20–%20Introduction%20to%20Xilinx/Simulation%20Waveforms/project1_halfAdder.png)
 
 ## Source Files
 - **Half-Adder Module** - half_adder.v

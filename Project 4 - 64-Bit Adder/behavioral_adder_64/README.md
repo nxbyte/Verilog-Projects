@@ -10,11 +10,11 @@ This module tested: all possible combinations from 0 to 31 and, seperately, two 
 
 Test 1: Simulation results from the Verilog representation of this Behavioral Adder **(All possible combinations from 0 to 31)**
 
-![Project 4 Waveform for Test 1](/Project 4 - 64-Bit Adder/behavioral_adder_64/Simulation Waveforms/project4_test_E.png)
+![Project 4 Waveform for Test 1](/Project%204%20-%2064-Bit%20Adder/behavioral_adder_64/Simulation%20Waveforms/project4_test_E.png)
 
 Test 2: Simulation results from the Verilog representation of this Behavioral Adder **(Two large 32-bit integers)**
 
-![Project 4 Waveform for Test 2](/Project 4 - 64-Bit Adder/behavioral_adder_64/Simulation Waveforms/project4_test_F.png)
+![Project 4 Waveform for Test 2](/Project%204%20-%2064-Bit%20Adder/behavioral_adder_64/Simulation%20Waveforms/project4_test_F.png)
 
 ## Source Files
 

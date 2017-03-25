@@ -12,7 +12,7 @@ To verify this module, the binary bits of the input is converted into their deci
 
 Simulation results from the Verilog representation of this Four-Sixteen Decoder
 
-![Project 2 Waveform for Four-Sixteen Decoder](/Project 2 – Combinational Logic/dec_4_to_16/Simulation Waveforms/project2_416decoder.png)
+![Project 2 Waveform for Four-Sixteen Decoder](/Project%202%20–%20Combinational%20Logic/dec_4_to_16/Simulation%20Waveforms/project2_416decoder.png)
 
 ## Source Files
 - **Four-Sixteen Decoder Module** - dec_4_to_16.v

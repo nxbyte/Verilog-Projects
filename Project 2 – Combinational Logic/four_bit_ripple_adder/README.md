@@ -9,7 +9,7 @@ This 4-bit adder takes advantage of the full adder module by taking four full ad
 
 Simulation results from the Verilog representation of this Four-Bit Ripple Adder
 
-![Project 2 Waveform for Four-Sixteen Decoder](/Project 2 – Combinational Logic/four_bit_ripple_adder/Simulation Waveforms/project2_four_bit_adder.png)
+![Project%202%20Waveform%20for%20Four-Sixteen%20Decoder](/Project%202%20–%20Combinational%20Logic/four_bit_ripple_adder/Simulation%20Waveforms/project2_four_bit_adder.png)
 
 ## Source Files
 - **Four-Bit Ripple Adder Module** - four_bit_adder.v

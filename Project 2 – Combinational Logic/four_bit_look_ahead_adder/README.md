@@ -8,7 +8,7 @@ This 4-bit look ahead adder is an improved implementation of a 4-bit ripple adde
 
 Simulation results from the Verilog representation of this Four-Bit Look Ahead Adder
 
-![Project 2 Waveform for Four-Sixteen Decoder](/Project 2 – Combinational Logic/four_bit_look_ahead_adder/Simulation Waveforms/project2_four_bit_adder.png)
+![Project%202%20Waveform%20for%20Four-Sixteen%20Decoder](/Project%202%20–%20Combinational%20Logic/four_bit_look_ahead_adder/Simulation%20Waveforms/project2_four_bit_adder.png)
 
 ## Source Files
 - **Four-Bit Look Ahead Adder Module** - four_bit_adder_EC.v

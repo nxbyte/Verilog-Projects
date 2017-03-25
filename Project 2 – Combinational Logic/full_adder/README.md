@@ -8,7 +8,7 @@ This full adder takes 3-bits for the input (A, B and carry in) and outputs a 2-b
 
 Simulation results from the Verilog representation of this Full Adder
 
-![Project 2 Waveform for Full Adder](/Project 2 – Combinational Logic/full_adder/Simulation Waveforms/project2_full_adder.png)
+![Project%202%20Waveform%20for%20Full%20Adder](/Project%202%20–%20Combinational%20Logic/full_adder/Simulation%20Waveforms/project2_full_adder.png)
 
 ## Source Files
 - **Full Adder Module** - full_adder.v

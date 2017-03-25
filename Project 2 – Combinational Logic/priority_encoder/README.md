@@ -8,7 +8,7 @@ This priority encoder takes one 4-bit input and outputs the binary representatio
 
 Simulation results from the Verilog representation of this Priority Encoder
 
-![Project 2 Waveform for Priority Encoder](/Project 2 – Combinational Logic/priority_encoder/Simulation Waveforms/project2_priority_encoder.png)
+![Project%202%20Waveform%20for%20Priority%20Encoder](/Project%202%20–%20Combinational%20Logic/priority_encoder/Simulation%20Waveforms/project2_priority_encoder.png)
 
 ## Source Files
 - **Priority Encoder Module** - priority_encoder.v

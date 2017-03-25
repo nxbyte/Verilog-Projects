@@ -8,7 +8,7 @@ This 4-1 multiplexer takes an input of four bits and another input of 2-bits and
 
 Simulation results from the Verilog representation of this 4-1 Multiplexer
 
-![Project 2 Waveform for 4-1 Multiplexer](/Project 2 – Combinational Logic/mux_four_to_one/Simulation Waveforms/project2_41_mux.png)
+![Project%202%20Waveform%20for%204-1%20Multiplexer](/Project%202%20–%20Combinational%20Logic/mux_four_to_one/Simulation%20Waveforms/project2_41_mux.png)
 
 ## Source Files
 - **4-1 Multiplexer Module** - mux_four_to_one.v
