@@ -1,5 +1,11 @@
 `timescale 1ns / 1ps
 
+/*
+	Phase 1: Start to IDEX (Complete)
+    Phase 2: IDEX to MEM/WB
+    Phase 3: Full & Debugging/Testing
+*/
+
 module PC
   (
     input CLOCK,
@@ -30,6 +36,153 @@ module Add4
 
 endmodule
 
+
+module SignExtend
+(
+  input [31:0] inputInstruction,
+  output reg [63:0] outImmediate
+);
+  
+    always @(inputInstruction) begin
+      
+      if (inputInstruction[31:26] == 6'b000101) begin // B
+      
+        outImmediate[25:0] = inputInstruction[25:0];
+        outImmediate[63:26] = {64{outImmediate[25]}};
+      
+      end else if (inputInstruction[31:24] == 8'b10110100) begin // CBZ
+
+        outImmediate[19:0] = inputInstruction[23:5];
+        outImmediate[63:20] = {64{outImmediate[19]}};
+        
+      end else begin // D Type
+
+        outImmediate[9:0] = inputInstruction[20:12];
+        outImmediate[63:10] = {64{outImmediate[9]}};
+      end
+    end
+  
+endmodule
+
+
+module Mux2
+(
+  input [4:0] read1,
+  input [4:0] read2,
+  input control_reg2loc,
+  output reg [4:0] mux2reg_wire
+);
+
+  always @(read1, read2, control_reg2loc) begin
+    
+    case (control_reg2loc)
+      
+
+        
+        1'b0 : begin
+    mux2reg_wire <= read1;
+        end
+              1'b1 : begin
+    mux2reg_wire <= read2;
+        end
+              default : begin
+                mux2reg_wire <= 1'bx;
+              end
+    endcase
+  end
+  
+endmodule
+
+
+module IFID
+(
+  input [63:0] PC_in,
+  input [31:0] IC_in,
+  output reg [63:0] PC_out,
+  output reg [31:0] IC_out
+);
+  
+  always @(*) begin
+    PC_out <= PC_in;
+    IC_out <= IC_in;
+  end
+endmodule
+
+
+module IDEX 
+(
+  input [1:0] aluop_in, 	// EX Stage
+  input alusrc_in, 			// EX Stage
+  input isZeroBranch_in, 	// M Stage
+  input isUnconBranch_in, 	// M Stage
+  input memRead_in, 		// M Stage
+  input memwrite_in, 		// M Stage
+  input regwrite_in, 		// WB Stage
+  input mem2reg_in, 		// WB Stage
+  input [63:0] PC_in,		
+  input [63:0] regdata1_in,
+  input [63:0] regdata2_in,
+
+  output reg [1:0] aluop_out, 	// EX Stage
+  output reg alusrc_out, 		// EX Stage
+  output reg isZeroBranch_out, 	// M Stage
+  output reg isUnconBranch_out, // M Stage
+  output reg memRead_out, 		// M Stage
+  output reg memwrite_out, 		// M Stage
+  output reg regwrite_out,		// WB Stage
+  output reg mem2reg_out,		// WB Stage
+  output reg [63:0] PC_out,
+  output reg [63:0] regdata1_out,
+  output reg [63:0] regdata2_out 
+);
+  
+  always @(*) begin
+    /* Values for EX */
+    aluop_out <= aluop_in;
+	alusrc_out <= alusrc_in;
+    
+    /* Values for M */
+  	isZeroBranch_out <= isZeroBranch_in;
+    isUnconBranch_out <= isUnconBranch_in;
+  	memRead_out <= memRead_in;
+ 	memwrite_out <= memwrite_in;
+    
+    /* Values for WB */
+    regwrite_out <= regwrite_in;
+  	mem2reg_out <= mem2reg_in;
+    
+    /* Values for all Stages */
+    PC_out <= PC_in;
+    regdata1_out <= regdata1_in;
+    regdata2_out <= regdata2_in;
+  end
+endmodule
+
+
+module Register
+(
+  input [4:0] read1,
+  input [4:0] read2,
+  output reg [63:0] data1,
+  output reg [63:0] data2
+);
+
+  reg [63:0] Data[31:0];
+  integer initCount;
+  
+  initial begin
+    for (initCount = 0; initCount < 31; initCount = initCount + 1) begin
+      Data[initCount] = initCount;
+    end
+	
+    Data[31] = 64'h00000000;
+  end
+  
+  always @(read1, read2) begin
+    data1 = Data[read1];
+    data2 = Data[read2];
+  end
+endmodule
 
 module IC
 (
@@ -126,61 +279,13 @@ module IC
     Instruction[24:16] = Data[PC+1];
     Instruction[31:24] = Data[PC];
   end
-  
 endmodule
 
-
-module IFID
-  (
-    input [63:0] PC_in,
-    input [31:0] IC_in,
-    output reg [63:0] PC_out,
-    output reg [31:0] IC_out
-  );
-
-  always @(IC_in) begin
-    PC_out <= PC_in;
-    IC_out <= IC_in;
-  end
-endmodule
-
-module IDEX
-  (
-    input [31:0] IC,
-    input [1:0] aluop_in,
-	input alusrc_in,
-  	input isZeroBranch_in,
-    input isUnconBranch_in,
-  	input memRead_in,
- 	input memwrite_in,
-    input regwrite_in,
-  	input mem2reg_in,
-    output reg [1:0] aluop_out,
-	output reg alusrc_out,
-  	output reg isZeroBranch_out,
-    output reg isUnconBranch_out,
-  	output reg memRead_out,
- 	output reg memwrite_out,
-    output reg regwrite_out,
-  	output reg mem2reg_out
-  );
-
-  always @(*) begin
-    aluop_out <= aluop_in;
-	alusrc_out <= alusrc_in;
-  	isZeroBranch_out <= isZeroBranch_in;
-    isUnconBranch_out <= isUnconBranch_in;
-  	memRead_out <= memRead_in;
- 	memwrite_out <= memwrite_in;
-    regwrite_out <= regwrite_in;
-  	mem2reg_out <= mem2reg_in;
-  end
-  
-endmodule
 
 module Control
   (
     input [10:0] instruction,
+    output reg control_reg2loc,
     output reg [1:0] control_aluop,
 	output reg control_alusrc,
   	output reg control_isZeroBranch,
@@ -192,6 +297,8 @@ module Control
   );
   
   always @(instruction) begin
+    
+    control_reg2loc <= 1'b1;
     
     /* B */
     if (instruction[10:5] == 6'b000101) begin // Control bits for B
@@ -235,6 +342,7 @@ module Control
           control_alusrc <= 1'b1;
           control_aluop <= 2'b00;
           control_regwrite <= 1'b1;
+          control_reg2loc <= 1'bx;
         end
         
         /* STUR */
@@ -301,6 +409,7 @@ module Control
           control_alusrc <= 1'bx;
           control_aluop <= 2'bxx;
           control_regwrite <= 1'bx;
+          control_reg2loc <= 1'bx;
         end
       endcase
     end
@@ -308,8 +417,6 @@ module Control
   
 endmodule
 
-    
-    
     
 module ARM_CPU
 (
@@ -319,7 +426,7 @@ module ARM_CPU
 );
   
   wire [63:0] new_PC;
-  Add4 three (PC_out, new_PC);
+  Add4 plus1 (PC_out, new_PC);
   PC counter (CLOCK, new_PC, PC_out);
   
   wire [63:0] IFID_PC;
@@ -334,26 +441,48 @@ module ARM_CPU
   wire control_memwrite;
   wire control_regwrite;
   wire control_mem2reg;
-  Control mann (IFID_IC[31:21], control_aluop, control_alusrc, control_isZeroBranch, control_isUnconBranch, control_memRead, control_memwrite, control_regwrite, control_mem2reg);
+  wire control_reg2loc;
+  Control maine (IFID_IC[31:21], control_reg2loc, control_aluop, control_alusrc, control_isZeroBranch, control_isUnconBranch, control_memRead, control_memwrite, control_regwrite, control_mem2reg);
   
-    wire [1:0] IDEX_aluop;
-	wire IDEX_alusrc;
-  	wire IDEX_isZeroBranch;
-    wire IDEX_isUnconBranch;
-  	wire IDEX_memRead;
- 	wire IDEX_memwrite;
-    wire IDEX_regwrite;
-  	wire IDEX_mem2reg;
-  IDEX menn (IFID_IC, control_aluop, control_alusrc, control_isZeroBranch, control_isUnconBranch, control_memRead, control_memwrite, control_regwrite, control_mem2reg, IDEX_aluop, IDEX_alusrc, IDEX_isZeroBranch, IDEX_isUnconBranch, IDEX_memRead, IDEX_memwrite, IDEX_regwrite, IDEX_mem2reg);
+  wire [4:0] temp_reg2_in;
+  Mux2 laa(IFID_IC[20:16], IFID_IC[4:0], control_reg2loc, temp_reg2_in);
+  
+  wire [63:0] reg_data_1;
+  wire [63:0] reg_data_2;
+  Register inna(IFID_IC[9:5], temp_reg2_in, reg_data_1, reg_data_2);
+  
+  wire [1:0] IDEX_aluop;
+  wire IDEX_alusrc;
+  wire IDEX_isZeroBranch;
+  wire IDEX_isUnconBranch;
+  wire IDEX_memRead;
+  wire IDEX_memwrite;
+  wire IDEX_regwrite;
+  wire IDEX_mem2reg;
+  wire [63:0] IDEX_reg_data_1;
+  wire [63:0] IDEX_reg_data_2;
+  wire [63:0] IDEX_PC;
+  IDEX cache2 (control_aluop, control_alusrc, control_isZeroBranch, control_isUnconBranch, control_memRead, control_memwrite, control_regwrite, control_mem2reg, IFID_PC, reg_data_1, reg_data_2,  IDEX_aluop, IDEX_alusrc, IDEX_isZeroBranch, IDEX_isUnconBranch, IDEX_memRead, IDEX_memwrite, IDEX_regwrite, IDEX_mem2reg, IDEX_PC, IDEX_reg_data_1, IDEX_reg_data_2);
 
+
+  
+  
+
+  
+  
   always @(IFID_IC) begin
-    $display("%h = %b %b %b %b %b %b %b %b", IFID_IC, control_aluop, control_alusrc, control_isZeroBranch, control_isUnconBranch, control_memRead, control_memwrite, control_regwrite, control_mem2reg);
+    $display("%h = %b %b %b %b %b %b %b %b %d %d", IFID_IC, control_reg2loc, control_aluop, control_alusrc, control_isZeroBranch, control_isUnconBranch, control_memRead, control_memwrite, control_regwrite, control_mem2reg, IDEX_reg_data_1, IDEX_reg_data_2);
   end
   
-  /*
-	Phase 1: Start to IDEX (Complete)
-    Phase 2: IDEX to MEM/WB
-    Phase 3: Full & Debugging/Testing
-*/
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
 endmodule
