@@ -12,11 +12,14 @@ module CPU_TEST;
   
   IC RAM1 (PC_wire, IC_wire);
   
+  
+  
+  
   /* Setup the clock */
   initial begin
     CLOCK = 1'b0;
     
-    #13 $finish;
+    #10 $finish;
   end
   
   /* Toggle the clock */

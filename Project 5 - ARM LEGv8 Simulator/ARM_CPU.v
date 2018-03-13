@@ -3,7 +3,7 @@
 /*
 	Group Members: Nikita Eisenhauer and Warren Seto
 
-	Lab Name: ARM LEG v8 CPU Design 
+	Lab Name: ARM LEGv8 CPU Design (Single-Cycle) 
 */
 
 module ARM_CPU
@@ -224,7 +224,6 @@ module ARM_CPU
     end
   end
 endmodule
-Source code 2: PCMux Module
 
 module PCMux
 (
@@ -351,7 +350,6 @@ module ShiftLeft2
   end
   
 endmodule
-Source code 8: ALU_Control Module 
 
 module ALU_Control
 (
@@ -548,7 +546,6 @@ module Registers
   end
   
 endmodule
-Source code 12: Data_Memory Module 
 
 module Data_Memory
 (
