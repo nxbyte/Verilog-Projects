@@ -2,30 +2,32 @@
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/nextseto/Verilog-Projects/master/LICENSE)
 
-This is a repository that contains the source code for past labs and projects. 
+This is a repository that contains the source code for past labs and projects involving FPGA and Verilog based designs. 
 
 ## To Run & Test
 
-There are two ways to run and simulate the projects below. Either use the **Xilinx ISE** or an online tool called **EDA Playground**.
+There are two ways to run and simulate the projects below. Either use the **Xilinx Vivado** or an online tool called **EDA Playground**.
 
-##### Option 1. Xilinx ISE
+##### Option 1. Xilinx Vivado
 
-- Run the Xilinx ISE Suite with the module and test bench files for each project
+- Run the Xilinx Vivado Suite with the module and testbench files for each project. More instructions can be found [here](https://www.xilinx.com/support/university/students.html#overview).
 
 ##### Option 2. [EDA Playground](http://www.edaplayground.com/home)
-- Login with a Google or Facebook account to save and run modules and test benches
+- Login with a Google or Facebook account to save and run modules and testbenches
 - Testbench + Design: SystemVerilog/Verilog
 - Tools & Simulators: Icarus Verilog 0.9.7
 
-## Fall 2017
+## Spring 2018
 
-- [ARM LEGv8 Simulator with Pipelining](Project%206%20-%20ARM%20LEGv8%20Simulator%20with%20Pipelining): This project simulates an ARM LEG v8 multi-cycle pipelined CPU which supports a subset of instructions for the ARM LEG v8 ISA. Supported instructions include: ``LDUR``, ``STUR``, ``ADD``, ``SUB``, ``ORR``, ``AND``, ``CBZ`` and ``B``. This project is based on the ARM architecture from the textbook: *Computer Organization and Design: The Hardware/Software Interface ARM Edition by D. Patterson and J. Hennessy, Morgan Kaufmann, 2016* [ISBN: 978-012-8017333](https://www.amazon.com/Computer-Organization-Design-Interface-Architecture/dp/0128017333/ref=sr_1_1?ie=UTF8&qid=1483051663&sr=8-1&keywords=9780128017333)
+- [ARM LEGv8 Simulator with Pipelining](Project%206%20-%20ARM%20LEGv8%20Simulator%20with%20Pipelining): This project simulates an ARM LEGv8 multi-cycle/pipelined CPU which supports a subset of instructions for the ARM LEGv8 ISA. Supported instructions include: ``LDUR``, ``STUR``, ``ADD``, ``SUB``, ``ORR``, ``AND``, ``CBZ`` and ``B``. This project is based on the ARM architecture from the textbook: *Computer Organization and Design: The Hardware/Software Interface ARM Edition by D. Patterson and J. Hennessy, Morgan Kaufmann, 2016* [ISBN: 978-012-8017333](https://www.amazon.com/Computer-Organization-Design-Interface-Architecture/dp/0128017333/ref=sr_1_1?ie=UTF8&qid=1483051663&sr=8-1&keywords=9780128017333)
+
+- [ARM LEGv8 Simulator with Pipelining and Hazard Detection](Project%207%20-%20ARM%20LEGv8%20Simulator%20with%20Pipelining%20 and%20Hazard%20Detection): This project simulates an ARM LEGv8 multi-cycle/pipelined CPU with hazard detection which supports a subset of instructions for the ARM LEGv8 ISA. Supported instructions include: ``LDUR``, ``STUR``, ``ADD``, ``SUB``, ``ORR``, ``AND``, ``CBZ`` and ``B``. This project is based on the ARM architecture from the textbook: *Computer Organization and Design: The Hardware/Software Interface ARM Edition by D. Patterson and J. Hennessy, Morgan Kaufmann, 2016* [ISBN: 978-012-8017333](https://www.amazon.com/Computer-Organization-Design-Interface-Architecture/dp/0128017333/ref=sr_1_1?ie=UTF8&qid=1483051663&sr=8-1&keywords=9780128017333)
 
 ## Fall 2016
 
-- [64-Bit Adder](/Project%204%20-%2064-Bit%20Adder): This project contains three different implementations of a 64-Bit Adder module using: ripple-carry adders, 2-bit look ahead adders, and a behavioral design.
+- [ARM LEGv8 Simulator](/Project%205%20-%20ARM%20LEGv8%20Simulator): This project simulates an ARM LEGv8 single cycle CPU which supports a subset of instructions for the ARM LEGv8 ISA. Supported instructions include: ``LDUR``, ``STUR``, ``ADD``, ``SUB``, ``ORR``, ``AND``, ``CBZ`` and ``B``. This project is based on the ARM architecture from the textbook: *Computer Organization and Design: The Hardware/Software Interface ARM Edition by D. Patterson and J. Hennessy, Morgan Kaufmann, 2016* [ISBN: 978-012-8017333](https://www.amazon.com/Computer-Organization-Design-Interface-Architecture/dp/0128017333/ref=sr_1_1?ie=UTF8&qid=1483051663&sr=8-1&keywords=9780128017333)
 
-- [ARM LEGv8 Simulator](/Project%205%20-%20ARM%20LEGv8%20Simulator): This project simulates an ARM LEG v8 single cycle CPU which supports a subset of instructions for the ARM LEG v8 ISA. Supported instructions include: ``LDUR``, ``STUR``, ``ADD``, ``SUB``, ``ORR``, ``AND``, ``CBZ`` and ``B``. This project is based on the ARM architecture from the textbook: *Computer Organization and Design: The Hardware/Software Interface ARM Edition by D. Patterson and J. Hennessy, Morgan Kaufmann, 2016* [ISBN: 978-012-8017333](https://www.amazon.com/Computer-Organization-Design-Interface-Architecture/dp/0128017333/ref=sr_1_1?ie=UTF8&qid=1483051663&sr=8-1&keywords=9780128017333)
+- [64-Bit Adder](/Project%204%20-%2064-Bit%20Adder): This project contains three different implementations of a 64-Bit Adder module using: ripple-carry adders, 2-bit look ahead adders, and a behavioral design.
 
 ## Fall 2015
 
@@ -49,4 +51,4 @@ There are two ways to run and simulate the projects below. Either use the **Xili
 
 ## License
 
-All source code in **Verilog-Projects** is released under the MIT license. See LICENSE for details.
+All source code in **Verilog-Projects** are released under the MIT license. See LICENSE for details.

@@ -1,10 +1,12 @@
-# Project 5 - ARM LEGv8 Simulator
+# Project 6 - ARM LEGv8 Simulator with Pipelining
 
 ## Objective
 
-This functional single cycle (non-pipelined) processor is capable of performing basic arithmetic, logic and data operations. It is based on the ARM 64-bit architecture, with 32 registers each 64-bits wide with instruction lengths of 32-bits. 
+This functional multi-cycle/pipelined (not hazard protected) processor is capable of performing basic arithmetic, logic and data operations. It is based on the ARM 64-bit architecture, with 32 registers each 64-bits wide with instruction lengths of 32-bits. 
 
 Basic assembly instructions: ``LDUR``, ``STUR``, ``ADD``, ``SUB``, ``ORR``, ``AND``, ``CBZ`` and ``B`` are supported by the CPU, with ``LDUR`` and ``STUR`` supporting immediate values when performing certain operations to the registers module.
+
+In this version of the ARM CPU, the processor is pipelined to allow multiple instructions to run simultaneously. This is made possible with the addition of buffers/caches in between each stage of the processor's operation. This optimization reduces the amount of time to run each instruction; however, it does not protect against atomic reads in between register-base instructions. This flaw (hazard) will be addressed in the next revision of the processor (Project 7).
 
 During development, the group wrote a sample program (in ARMv7 assembly) and tested it on a Cypress PSoC 5LP and recorded its registers after each instruction. The group then verified this custom CPU with the state of the registers from the Cypress PSoC 5LP.
 
@@ -97,46 +99,6 @@ Example: ``B #2``
 
 - Sudo-C: ``PC = PC + 2``
 - Explanation: Jump two instructions
-
-## Test Program (Instructions)
-
-The thirteen instructions as shown in the table below is the test program used to test the functionality of the CPU.
-
-| Line # |      ARM Assembly     |                Machine Code             | Hexadecimal|
-|:------:|:----------------------|:---------------------------------------:|:----------:|
-|    1   | ``LDUR r2, [r10]``    | 1111 1000 0100 0000 0000 0001 0100 0010 | 0xF8400142 |
-|    2   | ``LDUR r3, [r10, #1]``| 1111 1000 0100 0000 0001 0001 0100 0011 | 0xF8401143 |
-|    3   | ``SUB r4, r3, r2``    | 1100 1011 0000 0010 0000 0000 0110 0100 | 0xCB020064 |
-|    4   | ``ADD r5, r3, r2``    | 1000 1011 0000 0010 0000 0000 0110 0101 | 0x8B020065 |
-|    5   | ``CBZ r1, #2``        | 1011 0100 0000 0000 0000 0000 0100 0001 | 0xB4000041 |
-|    6   | ``CBZ r0, #2``        | 1011 0100 0000 0000 0000 0000 0100 0000 | 0xB4000040 |
-|    7   | ``LDUR r2, [r10]``    | 1111 1000 0100 0000 0000 0001 0100 0010 | 0xF8400142 |
-|    8   | ``ORR r6, r2, r3``    | 1010 1010 0000 0011 0000 0000 0100 0110 | 0xAA030046 |
-|    9   | ``AND r7, r2, r3``    | 1000 1010 0000 0011 0000 0000 0100 0111 | 0x8A030047 |
-|   10   | ``STUR r4, [r7, #1]`` | 1111 1000 0000 0000 0001 0000 1110 0100 | 0xF80010E4 |
-|   11   | ``B #2``              | 0001 0100 0000 0000 0000 0000 0000 0011 | 0x14000003 |
-|   12   | ``LDUR r3, [r10, #1]``| 1111 1000 0100 0000 0001 0001 0100 0011 | 0xF8401143 |
-|   13   | ``ADD r8, r0, r1``    | 1000 1011 0000 0001 0000 0000 0000 1000 | 0x8B010008 |
-
-## Test Program (Register and Data Memory Setup)
-
-The instructions were entered into the instruction memory itself to properly show its functionality while simulated. 
-
-The Registers were initialized with values from 0-30 with register 31 defined set to 0 as stated in the reference sheet for LEGv8. 
-
-The Data Memory was initialized with values starting from 0-3100 with each content of memory being 100 more than the previous index with an exception of index 10 and 11 with the contents 1540 and 2117 respectively.
-
-## Waveforms
-
-- Simulation results of the final content in RAM (Data Memory)
-
-![Project 5 Waveform for Registers](/Project%205%20-%20ARM%20LEGv8%20Simulator/Simulation%20Waveforms/project5_test_A.png)
-
-- Simulation results of the final contents in the CPU's Registers
-
-![Project 5 Waveform for Data Memory](/Project%205%20-%20ARM%20LEGv8%20Simulator/Simulation%20Waveforms/project5_test_B.png)
-
-[More simulation results. (For each instruction)](/Project%205%20-%20ARM%20LEGv8%20Simulator/Simulation%20Waveforms/)
 
 ## Source Directories
 
