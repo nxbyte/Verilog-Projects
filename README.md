@@ -17,19 +17,7 @@ There are two ways to run and simulate the projects below. Either use the **Xili
 - Testbench + Design: SystemVerilog/Verilog
 - Tools & Simulators: Icarus Verilog 0.9.7
 
-## Spring 2018
-
-- [ARM LEGv8 Simulator with Pipelining](Project%206%20-%20ARM%20LEGv8%20Simulator%20with%20Pipelining): This project simulates an ARM LEGv8 multi-cycle/pipelined CPU which supports a subset of instructions for the ARM LEGv8 ISA. Supported instructions include: ``LDUR``, ``STUR``, ``ADD``, ``SUB``, ``ORR``, ``AND``, ``CBZ`` and ``B``. This project is based on the ARM architecture from the textbook: *Computer Organization and Design: The Hardware/Software Interface ARM Edition by D. Patterson and J. Hennessy, Morgan Kaufmann, 2016* [ISBN: 978-012-8017333](https://www.amazon.com/Computer-Organization-Design-Interface-Architecture/dp/0128017333/ref=sr_1_1?ie=UTF8&qid=1483051663&sr=8-1&keywords=9780128017333)
-
-- [ARM LEGv8 Simulator with Pipelining and Hazard Detection](Project%207%20-%20ARM%20LEGv8%20Simulator%20with%20Pipelining%20and%20Hazard%20Detection): This project simulates an ARM LEGv8 multi-cycle/pipelined CPU with hazard detection and forwarding capabilities which supports a subset of instructions for the ARM LEGv8 ISA. Supported instructions include: ``LDUR``, ``STUR``, ``ADD``, ``SUB``, ``ORR``, ``AND``, ``CBZ`` and ``B``. This project is based on the ARM architecture from the textbook: *Computer Organization and Design: The Hardware/Software Interface ARM Edition by D. Patterson and J. Hennessy, Morgan Kaufmann, 2016* [ISBN: 978-012-8017333](https://www.amazon.com/Computer-Organization-Design-Interface-Architecture/dp/0128017333/ref=sr_1_1?ie=UTF8&qid=1483051663&sr=8-1&keywords=9780128017333)
-
-## Fall 2016
-
-- [ARM LEGv8 Simulator](/Project%205%20-%20ARM%20LEGv8%20Simulator): This project simulates an ARM LEGv8 single cycle CPU which supports a subset of instructions for the ARM LEGv8 ISA. Supported instructions include: ``LDUR``, ``STUR``, ``ADD``, ``SUB``, ``ORR``, ``AND``, ``CBZ`` and ``B``. This project is based on the ARM architecture from the textbook: *Computer Organization and Design: The Hardware/Software Interface ARM Edition by D. Patterson and J. Hennessy, Morgan Kaufmann, 2016* [ISBN: 978-012-8017333](https://www.amazon.com/Computer-Organization-Design-Interface-Architecture/dp/0128017333/ref=sr_1_1?ie=UTF8&qid=1483051663&sr=8-1&keywords=9780128017333)
-
-- [64-Bit Adder](/Project%204%20-%2064-Bit%20Adder): This project contains three different implementations of a 64-Bit Adder module using: ripple-carry adders, 2-bit look ahead adders, and a behavioral design.
-
-## Fall 2015
+## Projects
 
 - [Half Adder](/Project%201%20–%20Introduction%20to%20Xilinx): This half adder adds two 1-bit binary numbers and outputs the sum of input and its carry.
 
@@ -48,6 +36,8 @@ There are two ways to run and simulate the projects below. Either use the **Xili
 - [4-1 Multiplexer](/Project%202%20–%20Combinational%20Logic/mux_four_to_one): This 4-1 multiplexer takes an input of four bits and another input of 2-bits and outputs based on the selected input. In this module, the two bits are the select bits that would select which one the inputs should be designated as the output.
 
 - [Traffic Light Controller](/Project%203%20–%20Traffic%20Light%20Controller): The aim of this project is to design a digital controller to control traffic at an intersection of a busy main street (North-South) and an occasionally used side street (East-West).
+
+- [64-Bit Adder](/Project%204%20-%2064-Bit%20Adder): This project contains three different implementations of a 64-Bit Adder module using: ripple-carry adders, 2-bit look ahead adders, and a behavioral design.
 
 ## License
 
