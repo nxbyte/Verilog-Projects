@@ -2,9 +2,9 @@
 
 ## Objective
 
-This 64-bit adder was designed using a structural gate-level implementation of many full adders linked together into a ripple-carry adder design. 
+This 64-bit adder was designed using a structural gate-level implementation of many full adders linked together into a ripple-carry adder design.
 
-This module tested: all possible combinations from 0 to 31 and, seperately, two large 32-bit integers. 
+This module tested: all possible combinations from 0 to 31 and, separately, two large 32-bit integers. 
 
 ## Waveforms
 

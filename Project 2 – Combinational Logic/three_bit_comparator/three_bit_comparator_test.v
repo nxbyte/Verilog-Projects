@@ -51,5 +51,4 @@ module three_bit_comparator_test;
       #1 {A, B} = count;
       #5 $stop;
     end
-  end
 endmodule

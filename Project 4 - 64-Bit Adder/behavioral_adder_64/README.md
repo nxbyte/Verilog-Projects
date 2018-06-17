@@ -2,9 +2,9 @@
 
 ## Objective
 
-This model was an abstracted implementation of a full adder written in a behavioral Verilog sense with no specific logic circuit design. 
+This model was an abstracted implementation of a full adder written in a behavioral Verilog sense with no specific logic circuit design.
 
-This module tested: all possible combinations from 0 to 31 and, seperately, two large 32-bit integers. 
+This module tested: all possible combinations from 0 to 31 and, separately, two large 32-bit integers. 
 
 ## Waveforms
 

@@ -2,7 +2,7 @@
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/nextseto/Verilog-Projects/master/LICENSE)
 
-This is a repository that contains the source code for past labs and projects involving FPGA and Verilog based designs. 
+This is a repository that contains the source code for past labs and projects involving FPGA and Verilog based designs.
 
 ## To Run & Test
 
@@ -27,7 +27,7 @@ There are two ways to run and simulate the projects below. Either use the **Xili
 
 - [Four Bit Look Ahead Adder](/Project%202%20–%20Combinational%20Logic/four_bit_look_ahead_adder): This 4-bit look ahead adder is an improved implementation of a 4-bit ripple adder by eliminating the propagation delay found in the 4-bit ripple adder. For each output, this implementation computes each previous carry simultaneously instead of waiting for the previous adder module to yield a carry. In this adder, the first carry bit is set to zero and simplifies the logic because there is no initial carry bit as the input. While this implementation uses more gates and more complex logic to accomplish the same task as the ripple adder, this implementation would add two 4-bit numbers much faster than the 4-bit ripple adder.
 
-- [3-bit Comparator](/Project%202%20–%20Combinational%20Logic/three_bit_comparator): This 3-bit comparator requires two 3-bit inputs and outputs whether the first input is greater than / less than / or equal to the second input. In practice, the 3-bit comparator would compare two numbers and output the relation between them. To verify this module, the binary input bits were converted into their decimal representation and compared mathematically, example: inputs of 010 and 010 represent, 2 and 2, which the module would output 001 for the ouputs: GT, LT, and EQ, respectively.
+- [3-bit Comparator](/Project%202%20–%20Combinational%20Logic/three_bit_comparator): This 3-bit comparator requires two 3-bit inputs and outputs whether the first input is greater than / less than / or equal to the second input. In practice, the 3-bit comparator would compare two numbers and output the relation between them. To verify this module, the binary input bits were converted into their decimal representation and compared mathematically, example: inputs of 010 and 010 represent, 2 and 2, which the module would output 001 for the outputs: GT, LT, and EQ, respectively.
 
 - [4-16 Decoder](/Project%202%20–%20Combinational%20Logic/dec_4_to_16): This 4-to-16 decoder takes one 4-bit input and outputs a 16-bit representation of the input. This module uses the concept of one-hot decoding where each output would have one output that would correspond to the input. An application for this decoder would be to convert a 4-bit binary value to its hexadecimal representation. To verify this module, the binary bits of the input is converted into their decimal representation and compared to the output’s decimal representation to see if they match.
 

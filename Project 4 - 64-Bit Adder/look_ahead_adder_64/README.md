@@ -2,11 +2,11 @@
 
 ## Objective
 
-This adder model was implemented using a structural gate-level implementation of a 2-bit look ahead adder combined together into a look ahead adder, which unlike the ripple adder version, allow for quicker computation, as each internal modular look ahead module is parallel in nature (although the overall structure is sequential). 
+This adder model was implemented using a structural gate-level implementation of a 2-bit look ahead adder combined together into a look ahead adder, which unlike the ripple adder version, allow for quicker computation, as each internal modular look ahead module is parallel in nature (although the overall structure is sequential).
 
 Each modular circuit is capable of taking 4 bits and summing them into a two bit output.
 
-This module tested: all possible combinations from 0 to 31 and, seperately, two large 32-bit integers. 
+This module tested: all possible combinations from 0 to 31 and, separately, two large 32-bit integers. 
 
 ## Waveforms
 
