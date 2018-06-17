@@ -20,7 +20,7 @@ module behavioral_full_adder_test;
   integer count2;
 
   // Instantiate the Unit Under Test (UUT)
-  behavioral_64_full_adder uut
+  behavioral_full_adder_64 uut
   (
     .A(A),
     .B(B),

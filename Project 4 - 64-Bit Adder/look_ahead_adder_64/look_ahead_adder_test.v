@@ -2,7 +2,6 @@
 
 /*
     Group Members: Nikita Eisenhauer and Warren Seto
-
     Lab Name: Adder Design
     Design Description: Verilog test fixture to test the 64-bit look ahead adder
 */

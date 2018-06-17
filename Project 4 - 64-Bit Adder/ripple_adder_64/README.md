@@ -4,7 +4,7 @@
 
 This 64-bit adder was designed using a structural gate-level implementation of many full adders linked together into a ripple-carry adder design.
 
-This module tested: all possible combinations from 0 to 31 and, separately, two large 32-bit integers. 
+This module tested: all possible combinations from 0 to 31 and, separately, two large 32-bit integers.
 
 ## Waveforms
 
@@ -19,4 +19,4 @@ Test 2: Simulation results from the Verilog representation of this Ripple Carry 
 ## Source Files
 
 - **Ripple Carry Adder Module** - ripple_adder_64.v
-- **Ripple Carry Adder Test Bench (Test 1)** - ripple_adder_64_test.v
+- **Ripple Carry Adder Test Bench** - ripple_adder_64_test.v

@@ -6,7 +6,7 @@ This adder model was implemented using a structural gate-level implementation of
 
 Each modular circuit is capable of taking 4 bits and summing them into a two bit output.
 
-This module tested: all possible combinations from 0 to 31 and, separately, two large 32-bit integers. 
+This module tested: all possible combinations from 0 to 31 and, separately, two large 32-bit integers.
 
 ## Waveforms
 
@@ -21,4 +21,4 @@ Test 2: Simulation results from the Verilog representation of this 2-Bit Look Ah
 ## Source Files
 
 - **2-Bit Look Ahead Adder Module** - look_ahead_adder_64.v
-- **2-Bit Look Ahead Adder Test Bench (Test 1)** - look_ahead_adder_test.v
+- **2-Bit Look Ahead Adder Test Bench** - look_ahead_adder_test.v

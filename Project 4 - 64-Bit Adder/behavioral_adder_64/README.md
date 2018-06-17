@@ -4,7 +4,7 @@
 
 This model was an abstracted implementation of a full adder written in a behavioral Verilog sense with no specific logic circuit design.
 
-This module tested: all possible combinations from 0 to 31 and, separately, two large 32-bit integers. 
+This module tested: all possible combinations from 0 to 31 and, separately, two large 32-bit integers.
 
 ## Waveforms
 
@@ -18,5 +18,5 @@ Test 2: Simulation results from the Verilog representation of this Behavioral Ad
 
 ## Source Files
 
-- **Behavioral Adder Adder Module** - behavioral_64_full_adder.v
-- **Behavioral Adder Test Bench (Test 1)** - behavioral_full_adder_test.v
+- **Behavioral Adder Adder Module** - behavioral_full_adder_64.v
+- **Behavioral Adder Test Bench** - behavioral_full_adder_test.v

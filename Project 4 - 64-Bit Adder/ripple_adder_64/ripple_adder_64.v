@@ -2,7 +2,6 @@
 
 /*
     Group Members: Nikita Eisenhauer and Warren Seto
-
     Lab Name: Adder Design
     Design Description: Verilog Module to implement a 64-bit ripple adder
 */
