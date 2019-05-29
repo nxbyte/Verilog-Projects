@@ -2,24 +2,25 @@
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/nextseto/Verilog-Projects/master/LICENSE)
 
-This is a repository that contains the source code for past labs and projects involving FPGA and Verilog based designs.
+This repository contains source code for past labs and projects involving FPGA and Verilog based designs.
 
 ## To Run & Test
 
-There are two ways to run and simulate the projects below. Either use the **Xilinx Vivado** or an online tool called **EDA Playground**.
+There are two ways to run and simulate the projects in this repository. Either use **Xilinx Vivado** or an online tool called **EDA Playground**.
 
 ##### Option 1. Xilinx Vivado
 
-- Run the Xilinx Vivado Suite with the module and testbench files for each project. More instructions can be found [here](https://www.xilinx.com/support/university/students.html#overview).
+- Run the Xilinx Vivado Suite with the module and testbench files within each project. More instructions can be found [here](https://www.xilinx.com/support/university/students.html#overview).
 
 ##### Option 2. [EDA Playground](http://www.edaplayground.com/home)
+
 - Login with a Google or Facebook account to save and run modules and testbenches
 - Testbench + Design: SystemVerilog/Verilog
 - Tools & Simulators: Icarus Verilog 0.9.7
 
 ## Projects
 
-- [Half Adder](/Project%201%20–%20Introduction%20to%20Xilinx): This half adder adds two 1-bit binary numbers and outputs the sum of input and its carry.
+- [Half Adder](/Project%201%20–%20Introduction%20to%20Xilinx): This half adder adds two 1-bit binary numbers and outputs the sum of the input and its corresponding carry.
 
 - [Full Adder](/Project%202%20–%20Combinational%20Logic/full_adder): This full adder takes 3-bits for the input (A, B and carry in) and outputs a 2-bit Sum and its corresponding Carry Out. The Sum will be the lowest value output and the Carry Out is the highest value output as well as where other full adders could be joined together.
 
