@@ -1,0 +1,66 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 06/14/2019 04:04:29 PM
+// Design Name: 
+// Module Name: alu_checker
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// Author : Rishi Jain
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module alu_checker(a,b,oper,opcode,s,z,p,out);
+    
+     input [3:0] a;
+    input [3:0] b;
+    input oper;
+    input [1:0] opcode;
+    output  s,z,p;
+    output reg [7:0] out;   
+    
+    always@(opcode or oper)
+    begin
+    if(oper==0)
+    begin
+    case(opcode)
+    
+    2'b00 : out = a+b;
+    2'b01 : out =  a-b;
+    2'b10 : out= a/b;
+    2'b11 : out= a*b ;
+    
+    endcase
+    end
+    
+    else if(oper==1)
+    begin
+    case(opcode)
+    
+    2'b00 : out= a | b;
+    2'b01 : out = a&b;
+    2'b10 : out = a^b;
+    2'b11 : out = (~(a^b)) ;
+ 
+    endcase
+    end 
+ end
+ 
+assign s = out[7];
+assign z = ~|(out);
+assign p = ^(out);
+
+
+endmodule
+
